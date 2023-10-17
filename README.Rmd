@@ -60,3 +60,4 @@ prediction <- predict(fit, dataPredict) # Perform forwards prediction. At the mo
 plot(prediction) # Plot of the prediction results
 ```
 
+More detailed documentation is available [here](./docs/home.md)
