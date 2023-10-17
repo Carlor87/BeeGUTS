@@ -130,3 +130,5 @@ plot(prediction) # Plot of the prediction results
 ```
 
 <img src="man/figures/README-example-5.png" width="100%" />
+
+More detailed documentation is available [here](./docs/home.md)
