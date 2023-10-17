@@ -14,8 +14,8 @@ The links below point towards specific pages that will guide you through
 the various aspects of the BeeGUTS package
 
 - [Datasets and Data read](./dataset_loading.md)
-- [Model calibration](./calibration.html)
-- [Model validation](./validation.html)
-- [Model predictions](./predictions.html)
-- [LCx calculations](./lc_x_calculation.html)
-- [Time Reinforced Toxicity check](./TRT_check.html)
+- [Model calibration](./calibration.md)
+- [Model validation](./validation.md)
+- [Model predictions](./predictions.md)
+- [LCx calculations](./lc_x_calculation.md)
+- [Time Reinforced Toxicity check](./TRT_check.md)
