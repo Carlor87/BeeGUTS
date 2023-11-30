@@ -42,7 +42,8 @@ devtools::install_github("bgoussen/BeeGUTS")
 ```
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to solve a common problem. For a more
+complete documentation, go [here](./docs/home.md).
 
 ```{r example}
 library(BeeGUTS)

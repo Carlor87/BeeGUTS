@@ -90,9 +90,9 @@ plot(fitSD)
 #> [[1]]
 ```
 
-<img src="figures/DOCS-unnamed-chunk-4-1.png" width="75%" /> The
-plotting function actually returns a list, because in case of multiple
-datasets, all fits are shown.
+<img src="figures/DOCS-plotfit-1.png" width="75%" /> The plotting
+function actually returns a list, because in case of multiple datasets,
+all fits are shown.
 
 ### Diagnostics
 
@@ -106,7 +106,7 @@ issue with the MCMC chains.
 traceplot(fitSD)
 ```
 
-<img src="figures/DOCS-unnamed-chunk-5-1.png" width="75%" />
+<img src="figures/DOCS-plottracefit-1.png" width="75%" />
 
 In the figure it is possible to see how the traces are all well behaving
 after the burn-in period (represented by the grey area), and that the 3
@@ -148,6 +148,6 @@ The PPC can also be visualized.
 plot( ppc(fitSD) )
 ```
 
-<img src="figures/DOCS-unnamed-chunk-7-1.png" width="75%" />
+<img src="figures/DOCS-plotppc-1.png" width="75%" />
 
 [Back to top](#)

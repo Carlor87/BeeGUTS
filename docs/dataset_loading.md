@@ -2,7 +2,7 @@ Datasets and Data read
 ================
 2023-10-13
 
-Back to [home](./home.html)
+Back to [home](./home.md)
 
 ## Datasets
 
@@ -75,8 +75,6 @@ concentration at time 0.
 To rest of the calculations will be done by the data reading function
 once all the parameters related to the test will be passed (see below).
 
-*Add short explanation about the time dependency of the exposure*
-
 ### Acute Contact
 
 Acute contact tests are tests in which a drop of contaminated liquid is
@@ -111,14 +109,14 @@ This function takes the following arguments:
   two test types using `c(type1, type2)`)
 - `bee_species`: to be chosen between “Honey_Bee”, “Bumble_Bee”,
   “Osmia_bicornis”. Species cannot be mixed, only one species at the
-  time is allowed. Default species is “Honey_bee”. It is possible to
+  time is allowed. Default species is “Honey_Bee”. It is possible to
   introduce a “User_Bee” if the following parameters are defined:
   - stomach release rate (1/d) `k_sr` (for acute oral tests - 0.625 1/d
-    for Hb)
+    for Honey Bee)
   - duration of exposure in days for the acute oral tests (d) `cTime`
-    (0.25 d for Hb)
+    (0.25 d for Honey Bee)
   - contact availability rate (1/d) `k_ca` (for acute contact tests -
-    0.4 1/d for Hb)
+    0.4 1/d for Honey Bee)
   - feeding rate `f_rate` (for chronic tests)
 
 When reading in chronic oral data, the argument `cstConcCal` should also
@@ -152,7 +150,11 @@ plot(datacalCO)
 #> [[1]]
 ```
 
-<img src="figures/DOCS-unnamed-chunk-2-1.png" width="75%" />
+<img src="figures/DOCS-plotCO-1.png" width="75%" />
+
+As expected, the concentration profile (solid black line) is a constant
+exposure, that interpolates the points given in the data file (black
+circles)
 
 ### Read Acute Oral
 
@@ -171,7 +173,15 @@ plot(datacalAO)
 #> [[1]]
 ```
 
-<img src="figures/DOCS-unnamed-chunk-4-1.png" width="75%" />
+<img src="figures/DOCS-plotAO-1.png" width="75%" />
+
+In this case the exposure profile (given by the concentration in the
+honey stomach of the bee) is made of two parts. A rising part that lasts
+`cTime` days where the maximum concentration is reached, and then a
+second part where the concentration declines exponentially due to the
+bee feeding uncontaminated food. The exponential decay is determined by
+the constant `k_sr` that for Honey Bees has a default value of 0.625
+1/d.
 
 ### Read Acute Contact
 
@@ -190,8 +200,12 @@ plot(datacalAC)
 #> [[1]]
 ```
 
-<img src="figures/DOCS-unnamed-chunk-6-1.png" width="75%" />
+<img src="figures/DOCS-plotAC-1.png" width="75%" />
+
+In this case the exposure profile is an exponentially decaying function
+determined by the contact availability constant `k_ca` that for Honey
+Bees is set to a default value of 0.4 1/d.
 
 [Back to top](#)
 
-Back to [home](./home.html)
+Back to [home](./home.md)
